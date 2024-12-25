@@ -10,11 +10,9 @@ smtp_port = 587
 your_email = "email@gmail.com"  # Replace with your email
 your_password = "password"  # Replace with your email password
 
-# Load the CSV file
-df = pd.read_csv('email_data.csv')
-print(df)
 # CC email list
 cc_email_list = []
+  
 
 # Email sending function
 def send_email(recipient_email, recipient):
@@ -28,7 +26,6 @@ def send_email(recipient_email, recipient):
     html_content = f"""
     <!DOCTYPE html>
     <html lang="en">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
       <table style="border-collapse:collapse;table-layout:fixed;border-spacing:0;vertical-align:top;min-width:320px;Margin:0 auto;background-color:#07003e;width:100%;" cellpadding="0" cellspacing="0">
         <tbody>
           <tr style="vertical-align:top">
@@ -42,11 +39,11 @@ def send_email(recipient_email, recipient):
                   </tr>
                 </table>
               </div>
-              
+
               <div style="padding:0px;background-color:transparent">
                 <div style="margin:0 auto;min-width:320px;max-width:650px;word-wrap:break-word;word-break:break-word;background-color:#ffffff">
                   <div style="border-collapse:collapse;display:table;width:100%;height:100%;background-color:transparent">
-                    <div style="max-width:320px;min-width:650px;display:table-cell;vertical-align:top;background-color:#ffffff;height:100%;width:100%!important;">
+                    <div style="max-width:650px;min-width:320px;display:table-cell;vertical-align:top;background-color:#ffffff;height:100%;width:100%!important;">
                       <table style="font-family:'IBM Plex Sans', sans-serif; width:100%; border:0;" role="presentation" cellpadding="0" cellspacing="0">
                         <tr>
                           <td style="padding-top:24px; text-align:center; word-break:break-word;">
@@ -70,6 +67,17 @@ def send_email(recipient_email, recipient):
                               </div>
                               <div style="font-size:14px;line-height:160%;text-align:center;word-wrap:break-word">
                                 <p style="line-height:160%;text-align:justify">We are excited to have you with us and can’t wait to see all the amazing things we will accomplish together in the coming year. Should you have any questions or need support, please feel free to reach out to any of us.</p>
+                              </div>
+                              <div style="font-size:14px;line-height:160%;text-align:center;word-wrap:break-word">
+                                <p style="line-height:160%;text-align:justify">To get started, we invite you to join our Facebook group and Discord channel. These platforms are great ways to stay updated on announcements, events, and opportunities, and to engage with fellow members of the community.</p>
+                              </div>  
+                              <div style="font-size:14px;line-height:100%;text-align:center;word-wrap:break-word">
+                                <p>
+                                    <strong>Facebook Group:</strong> <a href="https://www.facebook.com/groups/icpepsepupmanila" style="text-decoration: none; font-weight: bold;" target="_blank">Join here</a>
+                                </p>
+                                <p>
+                                    <strong>Discord Channel:</strong> <a href="https://discord.gg/Bwdz3UhhXR" style="text-decoration: none; font-weight: bold;" target="_blank">Join here</a>
+                                </p>
                               </div>
                               <div style="font-size:14px;line-height:160%;text-align:center;word-wrap:break-word">
                                 <p style="line-height:160%;text-align:justify">Best Regards,</p>
@@ -96,22 +104,22 @@ def send_email(recipient_email, recipient):
                         <tbody>
                           <tr>
                             <td style="word-break:break-word;padding-top:24px;align:center">
-                              <div style="width:80%;height: 2px;background: #07003E;margin:20px;padding-left:40px;padding-right:40px;"></div>
+                              <div style="width:80%;height: 2px;background: #282424;margin:20px;padding-left:40px;padding-right:40px;"></div>
                               <div style="text-align: center;">
-                                <img src="https://raw.githubusercontent.com/icpepsepupmanila/email-asset/main/ICPEP%20LOGO.png" style="width: 140px; height: 156px;" />
+                                <img src="https://github.com/icpepsepupmanila/email-asset/blob/main/icpep-logo.png?raw=true" style="width: 140px; height: 156px;" />
                               </div>
                               <div style="text-align: center; margin: 20px 0;">
-                                <a href="https://www.facebook.com/icpepse.pupmanila" style="display: inline-block; width: 28px; height: 28px; padding: 0 10px;">
-                                  <img src="https://raw.githubusercontent.com/icpepsepupmanila/email-asset/main/ICPEP%20LOGO.png" alt="Facebook" style="width: 28px; height: 28px;"/>
+                                <a href="https://www.facebook.com/icpepse.pupmanila" style="display: inline-block; width: 18px; height: 18px; padding: 0 10px;">
+                                  <img src="https://github.com/icpepsepupmanila/email-asset/blob/main/facebook.png?raw=true" alt="Facebook" style="width: 18px; height: 18px;"/>
                                 </a>
-                                <a href="https://www.instagram.com/icpep.se_pup?igsh=cThzcHptZ2ZmaWRx" style="display: inline-block; width: 28px; height: 28px; padding: 0 10px;">
-                                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram" style="width: 28px; height: 28px;"/>
+                                <a href="https://www.instagram.com/icpep.se_pup?igsh=cThzcHptZ2ZmaWRx" style="display: inline-block; width: 18px; height: 18px; padding: 0 10px;">
+                                  <img src="https://github.com/icpepsepupmanila/email-asset/blob/main/instagram.png?raw=true" alt="Instagram" style="width: 18px; height: 18px;"/>
                                 </a>
-                                <a href="https://www.linkedin.com/company/icpepse-pupmanila" style="display: inline-block; width: 28px; height: 28px; padding: 0 10px;">
-                                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo_2023.png" alt="LinkedIn" style="width: 28px; height: 28px;"/>
+                                <a href="https://www.linkedin.com/company/icpepse-pupmanila" style="display: inline-block; width: 18px; height: 18px; padding: 0 10px;">
+                                  <img src="https://github.com/icpepsepupmanila/email-asset/blob/main/linkedin.png?raw=true" alt="LinkedIn" style="width: 18px; height: 18px;"/>
                                 </a>
                               </div>
-                              
+
                               <div style="padding-left: 72px;padding-right: 72px;font-size: 12px;font-weight: 600;line-height: 18px;text-align: center;color: #07003E;margin: 20px 0;">
                                 Share your excitement with us, feel free to post this welcome message on your social media and tag us!
                               </div>
@@ -144,6 +152,11 @@ def send_email(recipient_email, recipient):
     except Exception as e:
         print(f"Failed to send email to {recipient}: {e}")
 
-# Iterate through the dataframe and send emails
-for index, row in df.iterrows():
-	send_email(row['Email'], row['First_Name'])
+if __name__ == "__main__":
+  # Load the CSV file
+  df = pd.read_csv('form2.csv')
+  print(df)
+
+  # Iterate through the dataframe and send emails
+  for index, row in df.iterrows():
+    send_email(row['Email'], row['First_Name'])
